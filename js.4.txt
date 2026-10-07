@@ -1,0 +1,13 @@
+let email="myEmail@email.com"
+function maskEmail(email)
+{
+  let parts=email.split("@");
+  let name=parts[0];
+  let domain=parts[1];
+
+  let maskEmail= name[0] + "*".repeat(name.length-2) + name[name.length-1];
+  return maskEmail + "@" + domain;
+
+}
+
+console.log(maskEmail(email));
